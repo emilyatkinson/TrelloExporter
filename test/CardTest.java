@@ -1,10 +1,10 @@
-package Tests;
+
 
 import static org.junit.Assert.*;
 
 import org.junit.Test;
 
-public class CSVTest {
+public class CardTest {
 
 	@Test
 	public void test() {
