@@ -22,10 +22,14 @@ public class TrelloServlet extends HttpServlet {
 			HttpServletResponse response) throws ServletException, IOException {
 
 		String inUrl = request.getParameter("userUrl"); 
+		
+		if (inUrl == null || inUrl.isEmpty()) {
+			errorOuput(request, response);
+			return;
+		}
 		try {
 			Main.writeCSVFileFromURL(inUrl);
 		} catch (ParseException e) {
-			// TODO Auto-generated catch block
 			e.printStackTrace();
 		}
 
@@ -50,28 +54,9 @@ public class TrelloServlet extends HttpServlet {
          
         inStream.close();
         outStream.close(); 
+		}
 
 
-//		String path = getServletContext().getRealPath("trallo.csv");
-//		"/Users/Atkinson/Documents/trallo.csv"
-//		response.setContentType("text/csv");
-//		response.setHeader("Content-Disposition",
-//				"attachment; filename=trallo.csv");
-//	
-//		FileInputStream in = new FileInputStream(path); 
-//		PrintWriter out = response.getWriter(); 
-//		
-//		int i = in.read(); 
-//		while( i != -1) { 
-//			out.write(i);
-//			i = in.read(); 
-//			System.out.println(i);
-//		}
-//		in.close(); 
-//		out.close(); 
-		
-
-	}
 
 	@Override
 	protected void doGet(HttpServletRequest request,
@@ -85,6 +70,8 @@ public class TrelloServlet extends HttpServlet {
 		String message = (String) request.getAttribute("message");
 		if (message == null) {
 			message = "Please fill in the URL.";
+		} else if (!(message.startsWith("https://trello.com/"))) {
+			message = "Please input a Trell URL"; 
 		}
 		request.setAttribute("message", message);
 		getServletContext().getRequestDispatcher("/index.jsp").forward(request,
