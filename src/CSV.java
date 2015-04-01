@@ -7,14 +7,12 @@ import java.util.List;
 
 public class CSV {
 	private static final String COMMA_DELIMITER = ",";  
-	private static final String NEW_LINE_SEPARATOR = "\n"; 
-	
-//	ArrayList<Card> card = CardCreator.setCards(jsonObject);   
-	
+	private static final String NEW_LINE_SEPARATOR = "\n";  
 	private static final String FILE_HEADER = "nam,desc,id,listid"; 
 	
+	
 	public void createCSVFile(String destinationFileName, ArrayList<Card> card) {
-		
+	
 			  	                
 		FileWriter fileWriter = null; 
 		File file = new File("/Users/Atkinson/Documents/trallo.csv");
@@ -24,13 +22,13 @@ public class CSV {
 			fileWriter.append(NEW_LINE_SEPARATOR); 
 	
 		for (Card card1: card) { 
-			  fileWriter.append(String.valueOf(card1.getName()));
+			  fileWriter.append(addDoubleQuotesAround(card1.getName()));
+                fileWriter.append(COMMA_DELIMITER); 
+                fileWriter.append(addDoubleQuotesAround(card1.getDesc())); 
                 fileWriter.append(COMMA_DELIMITER);
-                fileWriter.append(card1.getDesc());
+                fileWriter.append(addDoubleQuotesAround(card1.getId()));
                 fileWriter.append(COMMA_DELIMITER);
-                fileWriter.append(card1.getId());
-                fileWriter.append(COMMA_DELIMITER);
-                fileWriter.append(card1.getIdlist());
+                fileWriter.append(addDoubleQuotesAround(card1.getIdlist()));
                 fileWriter.append(NEW_LINE_SEPARATOR);
 		}
 		 } catch (Exception e) {
@@ -48,6 +46,10 @@ public class CSV {
 			 	             
 			 	        }
 			 	    }
+	
+	public static String addDoubleQuotesAround(String str) {
+	    return "\"" + str + "\"";
+	}
  
 }
 
