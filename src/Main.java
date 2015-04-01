@@ -6,9 +6,9 @@ import org.json.simple.JSONObject;
 import org.json.simple.parser.ParseException;
 
 public class Main {
-//	public static void main(String[] args) throws IOException, ParseException {
-//		writeCSVFileFromURL("https://trello.com/b/qrdIFuVw/brainstorming");
-//	}
+	public static void main(String[] args) throws IOException, ParseException {
+		writeCSVFileFromURL("https://trello.com/b/ul2foDit/tv-road-trip");
+	}
 	public static void writeCSVFileFromURL(String userURL) throws IOException,
 			ParseException {
 
@@ -31,7 +31,7 @@ public class Main {
 			System.out.println(card1.getIdlist());
 
 		}
-		csv.createCSVFile("/WebContent/trello.csv", cards);
+		csv.createCSVFile("trillo.csv", cards);
 
 	}
 

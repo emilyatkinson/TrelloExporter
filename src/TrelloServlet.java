@@ -1,3 +1,4 @@
+import java.io.File;
 import java.io.FileInputStream;
 import java.io.IOException;
 import java.io.OutputStream;
@@ -28,27 +29,47 @@ public class TrelloServlet extends HttpServlet {
 			e.printStackTrace();
 		}
 
+		String filePath = "/Users/Atkinson/Documents/trallo.csv"; 
+        File downloadFile = new File(filePath);
+        FileInputStream inStream = new FileInputStream(downloadFile);
 	
-	
+        ServletContext context = getServletContext();
+        response.setContentType("text/csv");
+        
+        response.setContentLength((int) downloadFile.length());
+        String headerKey = "Content-Disposition";
+        String headerValue = String.format("attachment; filename=\"%s\"", downloadFile.getName());
+        response.setHeader(headerKey, headerValue); 
+        OutputStream outStream = response.getOutputStream(); 
+        byte[] buffer = new byte[4096];
+        int bytesRead = -1;
+         
+        while ((bytesRead = inStream.read(buffer)) != -1) {
+            outStream.write(buffer, 0, bytesRead);
+        }
+         
+        inStream.close();
+        outStream.close(); 
 
 
-		String path = getServletContext().getRealPath("/WebContent/trello.csv");
-	
-		response.setContentType("text/csv");
-		response.setHeader("Content-Disposition",
-				"attachment; filename=trello.csv");
-	
-		FileInputStream in = new FileInputStream(path); 
-		PrintWriter out = response.getWriter(); 
+//		String path = getServletContext().getRealPath("trallo.csv");
+//		"/Users/Atkinson/Documents/trallo.csv"
+//		response.setContentType("text/csv");
+//		response.setHeader("Content-Disposition",
+//				"attachment; filename=trallo.csv");
+//	
+//		FileInputStream in = new FileInputStream(path); 
+//		PrintWriter out = response.getWriter(); 
+//		
+//		int i = in.read(); 
+//		while( i != -1) { 
+//			out.write(i);
+//			i = in.read(); 
+//			System.out.println(i);
+//		}
+//		in.close(); 
+//		out.close(); 
 		
-		int i = in.read(); 
-		while( i != -1) { 
-			out.write(i);
-			i = in.read(); 
-			System.out.println(i);
-		}
-		in.close(); 
-		out.close(); 
 
 	}
 
