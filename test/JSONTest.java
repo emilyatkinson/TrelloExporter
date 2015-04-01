@@ -13,7 +13,7 @@ public class JSONTest {
 	}
 
 	@Test
-	public void test() {
+	public void jsonURLShould() {
 		fail("Not yet implemented");
 	}
 

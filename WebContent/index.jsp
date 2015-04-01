@@ -4,7 +4,7 @@
 <html>
 <head>
 <meta http-equiv="Content-Type" content="text/html; charset=ISO-8859-1">
-<title>URL Highlighter</title>
+<title>Export Your Trello Board!</title>
 </head>
 <body>
 	<h1>Hello!</h1>
@@ -16,11 +16,11 @@
 			<i>${message}</i>
 		</p>
 	</c:if>
-	<form action="trelloURL" method="post">
+	<form action="trelloURL" method="get">
 		<input type="hidden" name="action" value="add"> <label
 			class="pad_top">Please enter URL:</label> <input type="userUrl"
 			name="userUrl"><br> <label>&nbsp;</label> <input
-			type="submit" value="Let's Highlight!" class="margin_left">
+			type="submit" value="Submit" class="margin_left">
 	</form>
 </body>
 </html>

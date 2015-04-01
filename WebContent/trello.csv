@@ -1,0 +1,46 @@
+nam,desc,id,listid
+Track progress,How much percentage of tasks done by each member? 
+,5515b0d2954c1c1ddd570c0e,5515ad4c65484a56fe3ddc45
+Dependencies,,5515b1fd131b20e56ad956b9,5515ad4c65484a56fe3ddc45
+Verify url is trello board,,551a0177960f9fad760148ef,551a0163024d0d987614797c
+Fix card hashmap. (K, V) = (id, new Card(id, idlist, name, desc)); make sure build wasn't broken by mixing projects.,,551a08ec77a026c610a6388c,551a0163024d0d987614797c
+convert idList for cards to the  actual list name,,551ab0fe6bc02d3cbd53f8ec,551a0163024d0d987614797c
+naming convention should be (boardname).csv,,551ad87ead200e301de8eb9b,551a0163024d0d987614797c
+should save into downloads?,,551ad88a09c9bee60cacc733,551a0163024d0d987614797c
+http://buildbettersoftware.com/with-trello/  - Using Trello for Agile Software Development: The Complete Guide,,5515ae06b3f74e15c766b4bd,5515ad537508c82864ec8735
+http://help.trello.com/article/747-exporting-data-from-trello-1,Exporting data as JSON
+,5515ae0a2f1c030f071c5419,5515ad537508c82864ec8735
+https://json-csv.com/,,5515adf0ee9c3c7f13347a4d,5515ad537508c82864ec8735
+http://www.gojs.net/latest/samples/mindMap.html,,5515af016f5e70804d831de9,5515ad537508c82864ec8735
+https://trello.com/docs/#generating-your-developer-key,,5515af1aab1e7271c56beb28,5515ad537508c82864ec8735
+http://blog.trello.com/heres-the-official-trello-css-guide/,,5515af8dad7d9eb7d064dc17,5515ad537508c82864ec8735
+https://gist.github.com/joshmcarthur/2839352  brad you should look into this!,,55187b5cfb16b8aa639c07a7,5515ad537508c82864ec8735
+Trello and Java! look into this https://github.com/joelso/trello4j,,55187bf995ff0c10cc347e13,5515ad537508c82864ec8735
+http://crunchify.com/how-to-read-json-object-from-file-in-java/,,55196c0b76cc2854e9de5661,5515ad537508c82864ec8735
+http://stackoverflow.com/questions/921262/how-to-download-and-save-a-file-from-internet-using-java,,55196f2ec32971a59a84fea7,5515ad537508c82864ec8735
+http://examples.javacodegeeks.com/core-java/writeread-csv-files-in-java-example/   CSV writer in java,,5519b1d59a683d419abbcaf2,5515ad537508c82864ec8735
+https://github.com/emilyatkinson/TrelloExporter i think i got the github repository to work! comment your github names so i can add y'all as collaborators,,5519ed1d2869d0b190dbac3d,5515ad537508c82864ec8735
+Is this an example question?,,5515ad6eca261dd34879a8ee,5515ad602f1c030f071c5381
+How do we deal with different data that can be attached to cards?,,5515adb649d47fb213d3d169,5515ad602f1c030f071c5381
+Do we ignore comments? What about descriptions? Labels/checklist?,,5515adbb86ffafdf6a14f18d,5515ad602f1c030f071c5381
+Where is everyone?,,5515bac368b5743f423db447,5515ad602f1c030f071c5381
+Can you send your example of pulling JSON data, Brad?,,55199ae2bc810c5ec56b0ca8,5515ad602f1c030f071c5381
+Brad, can you add upload your changes at the end of the night to the github repo? (look at useful links),,5519ed6f4831e86276897527,5515ad602f1c030f071c5381
+Trello --> CSV,Excel? 
+,5515ae9c363f54fec44b834f,5515ae8057bb939a4c0547fa
+CSV --> Trello,Excel? 
+,5515aea165484a56fe3dddb6,5515ae8057bb939a4c0547fa
+Agile Template,,5515aeb749d47fb213d3d280,5515ae8057bb939a4c0547fa
+Static local copy (HTML file?),,5515aec78cecfd4cbd1fb2cb,5515ae8057bb939a4c0547fa
+Mind map interaction,,5515aece532c3078e034820d,5515ae8057bb939a4c0547fa
+Initial card class(Over-verbose),,5519e75dc2ba47675cb95009,5519e7505d86ccd9bb805c2d
+trimmed(Possible useful fields),,5519e9c617c0dec8fe2d878c,5519e7505d86ccd9bb805c2d
+Card Class: ID, idLIst, Name, Desc, only... works for testing,,5519ea04b71a6e2f41fd32f8,5519e7505d86ccd9bb805c2d
+Card Class(Lean): id, idlist, name, desc,,5519ec9fbcd4341d91617b6f,5519e7505d86ccd9bb805c2d
+Horny Bacon,,5515ae5779eedacc2d26113a,5515ae50d7ef83b13121ddea
+https://github.com/bethf,,5519fa6029e78990fece12a1,5515ae50d7ef83b13121ddea
+hic sunt dracones,,551a152177a026c610a642ec,5515ae50d7ef83b13121ddea
+GreenHopper,,5515af0bd6e5f276e0d85487,5515af03a5190e0eb71cb9f8
+Make Trello API your BFF,,5515af17822a871f641337f6,5515af03a5190e0eb71cb9f8
+Play around with Trello,,5515af34e34d89c36325f431,5515af03a5190e0eb71cb9f8
+Look into and take note of other story boards (especially agile ones),GreenHopper,5515af4a7c048d789015df7e,5515af03a5190e0eb71cb9f8

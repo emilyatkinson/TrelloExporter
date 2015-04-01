@@ -10,7 +10,7 @@ public class CSV {
 	
 //	ArrayList<Card> card = CardCreator.setCards(jsonObject);   
 	
-	private static final String FILE_HEADER = "name,desc,id,listid"; 
+	private static final String FILE_HEADER = "nam,desc,id,listid"; 
 	
 	public void createCSVFile(String destinationFileName, ArrayList<Card> card) {
 		
