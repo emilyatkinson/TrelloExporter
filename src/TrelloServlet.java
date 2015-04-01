@@ -23,7 +23,7 @@ public class TrelloServlet extends HttpServlet {
 
 		String inUrl = request.getParameter("userUrl"); 
 		
-		if (inUrl == null || inUrl.isEmpty()) {
+		if (inUrl == null || inUrl.isEmpty() || (!(inUrl.startsWith("https://trello.com/")))) {
 			errorOuput(request, response);
 			return;
 		}
